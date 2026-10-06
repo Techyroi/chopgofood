@@ -8,7 +8,7 @@ import { CartProvider } from "./context/CartContext";
 import { OrdersProvider } from "./context/OrdersContext";
 
 import "./index.css";
-import "./app.css";
+import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
