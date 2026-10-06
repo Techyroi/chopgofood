@@ -44,6 +44,17 @@ const restaurantSchema = new mongoose.Schema(
       trim: true,
     },
 
+    location: {
+  latitude: {
+    type: Number,
+    required: true,
+  },
+  longitude: {
+    type: Number,
+    required: true,
+  },
+},
+
     phone: {
       type: String,
       default: "",
@@ -63,10 +74,37 @@ const restaurantSchema = new mongoose.Schema(
       min: 0,
     },
 
-    estimatedDeliveryTime: {
-      type: Number,
-      default: 30,
-      min: 1,
+    estimatedDeliveryTimeMin: {
+        type: Number,
+        default: 20,
+         min: 1,
+    },
+
+
+    estimatedDeliveryTimeMax: {
+         type: Number,
+         default: 40,
+         min: 1,
+    },
+
+    badge: {
+     type: String,
+     enum: ["none", "topRated", "promo"],
+     default: "none",
+    },
+
+
+    deliveryMessage: {
+     type: String,
+     default: "",
+    trim: true,
+    },
+    
+
+    deliveryType: {
+     type: String,
+     enum: ["fee", "free", "fastest"],
+     default: "fee",
     },
 
     isOpen: {
@@ -83,5 +121,10 @@ const restaurantSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+restaurantSchema.index({
+  isActive: 1,
+  createdAt: -1,
+});
 
 module.exports = mongoose.model("Restaurant", restaurantSchema);

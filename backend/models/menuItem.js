@@ -58,4 +58,22 @@ const menuItemSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("MenuItem", menuItemSchema);
+menuItemSchema.index({
+  restaurant: 1,
+  isAvailable: 1,
+  createdAt: -1,
+});
+
+menuItemSchema.index({
+  restaurant: 1,
+  createdAt: -1,
+});
+
+menuItemSchema.index({
+  isAvailable: 1,
+  createdAt: -1,
+});
+
+module.exports =
+  mongoose.models.MenuItem ||
+  mongoose.model("MenuItem", menuItemSchema);

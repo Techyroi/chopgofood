@@ -13,6 +13,8 @@ const router = express.Router();
 
 router.get("/", getMenuItems);
 
+router.get("/restaurant/:restaurantId", getRestaurantMenuItems);
+
 router.get("/:id", getMenuItemById);
 
 router.post("/", createMenuItem);

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Jollof Rice with Chicken",
+    "filename": "01-jollof-rice-with-chicken.jpg",
+    "publicId": "chopgofood/menu/01-jollof-rice-with-chicken",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873875/chopgofood/menu/01-jollof-rice-with-chicken.jpg"
+  },
+  {
+    "name": "Fried Rice with Chicken",
+    "filename": "02-fried-rice-with-chicken.jpg",
+    "publicId": "chopgofood/menu/02-fried-rice-with-chicken",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873875/chopgofood/menu/02-fried-rice-with-chicken.jpg"
+  },
+  {
+    "name": "Pizza",
+    "filename": "03-pizza.jpg",
+    "publicId": "chopgofood/menu/03-pizza",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873877/chopgofood/menu/03-pizza.jpg"
+  },
+  {
+    "name": "Burger",
+    "filename": "04-burger.jpg",
+    "publicId": "chopgofood/menu/04-burger",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873878/chopgofood/menu/04-burger.jpg"
+  },
+  {
+    "name": "Shawarma",
+    "filename": "05-shawarma.jpg",
+    "publicId": "chopgofood/menu/05-shawarma",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873878/chopgofood/menu/05-shawarma.jpg"
+  },
+  {
+    "name": "Amala",
+    "filename": "06-amala.jpg",
+    "publicId": "chopgofood/menu/06-amala",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873879/chopgofood/menu/06-amala.jpg"
+  },
+  {
+    "name": "Pounded Yam",
+    "filename": "07-pounded-yam.jpg",
+    "publicId": "chopgofood/menu/07-pounded-yam",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873880/chopgofood/menu/07-pounded-yam.jpg"
+  },
+  {
+    "name": "Egusi Soup",
+    "filename": "08-egusi-soup.jpg",
+    "publicId": "chopgofood/menu/08-egusi-soup",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873881/chopgofood/menu/08-egusi-soup.jpg"
+  },
+  {
+    "name": "Banga Soup",
+    "filename": "09-banga-soup.jpg",
+    "publicId": "chopgofood/menu/09-banga-soup",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873882/chopgofood/menu/09-banga-soup.jpg"
+  },
+  {
+    "name": "Chinese Rice",
+    "filename": "10-chinese-rice.jpg",
+    "publicId": "chopgofood/menu/10-chinese-rice",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873883/chopgofood/menu/10-chinese-rice.jpg"
+  },
+  {
+    "name": "Samosa",
+    "filename": "11-samosa.jpg",
+    "publicId": "chopgofood/menu/11-samosa",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873883/chopgofood/menu/11-samosa.jpg"
+  },
+  {
+    "name": "Black Soup",
+    "filename": "12-black-soup.jpg",
+    "publicId": "chopgofood/menu/12-black-soup",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873884/chopgofood/menu/12-black-soup.jpg"
+  },
+  {
+    "name": "Kpomo",
+    "filename": "13-kpomo.jpg",
+    "publicId": "chopgofood/menu/13-kpomo",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873885/chopgofood/menu/13-kpomo.jpg"
+  },
+  {
+    "name": "Plantain",
+    "filename": "14-plantain.jpg",
+    "publicId": "chopgofood/menu/14-plantain",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873887/chopgofood/menu/14-plantain.jpg"
+  },
+  {
+    "name": "Cow Tail",
+    "filename": "15-cow-tail.jpg",
+    "publicId": "chopgofood/menu/15-cow-tail",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873887/chopgofood/menu/15-cow-tail.jpg"
+  },
+  {
+    "name": "Cow Leg",
+    "filename": "16-cow-leg.jpg",
+    "publicId": "chopgofood/menu/16-cow-leg",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873888/chopgofood/menu/16-cow-leg.jpg"
+  },
+  {
+    "name": "Turkey",
+    "filename": "17-turkey.jpg",
+    "publicId": "chopgofood/menu/17-turkey",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873889/chopgofood/menu/17-turkey.jpg"
+  },
+  {
+    "name": "Mini Munch",
+    "filename": "18-mini-munch.jpg",
+    "publicId": "chopgofood/menu/18-mini-munch",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873890/chopgofood/menu/18-mini-munch.jpg"
+  },
+  {
+    "name": "Pepper Rice",
+    "filename": "19-pepper-rice.jpg",
+    "publicId": "chopgofood/menu/19-pepper-rice",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873891/chopgofood/menu/19-pepper-rice.jpg"
+  },
+  {
+    "name": "Chicken Shawarma",
+    "filename": "20-chicken-shawarma.jpg",
+    "publicId": "chopgofood/menu/20-chicken-shawarma",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873892/chopgofood/menu/20-chicken-shawarma.jpg"
+  },
+  {
+    "name": "Sausage",
+    "filename": "21-sausage.jpg",
+    "publicId": "chopgofood/menu/21-sausage",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873893/chopgofood/menu/21-sausage.jpg"
+  },
+  {
+    "name": "Pepper Sauce",
+    "filename": "22-pepper-sauce.jpg",
+    "publicId": "chopgofood/menu/22-pepper-sauce",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873894/chopgofood/menu/22-pepper-sauce.jpg"
+  },
+  {
+    "name": "Spring Roll",
+    "filename": "23-spring-roll.jpg",
+    "publicId": "chopgofood/menu/23-spring-roll",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873895/chopgofood/menu/23-spring-roll.jpg"
+  },
+  {
+    "name": "Gizzard Cut Out",
+    "filename": "24-gizzard-cut-out.jpg",
+    "publicId": "chopgofood/menu/24-gizzard-cut-out",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873895/chopgofood/menu/24-gizzard-cut-out.jpg"
+  },
+  {
+    "name": "Tiger Nut",
+    "filename": "25-tiger-nut.jpg",
+    "publicId": "chopgofood/menu/25-tiger-nut",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873896/chopgofood/menu/25-tiger-nut.jpg"
+  },
+  {
+    "name": "Hollandia",
+    "filename": "26-hollandia.jpg",
+    "publicId": "chopgofood/menu/26-hollandia",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873897/chopgofood/menu/26-hollandia.jpg"
+  },
+  {
+    "name": "Chivita Active",
+    "filename": "27-chivita-active.jpg",
+    "publicId": "chopgofood/menu/27-chivita-active",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873898/chopgofood/menu/27-chivita-active.jpg"
+  },
+  {
+    "name": "Zobo",
+    "filename": "28-zobo.jpg",
+    "publicId": "chopgofood/menu/28-zobo",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873899/chopgofood/menu/28-zobo.jpg"
+  },
+  {
+    "name": "Big Fanta",
+    "filename": "29-big-fanta.jpg",
+    "publicId": "chopgofood/menu/29-big-fanta",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873899/chopgofood/menu/29-big-fanta.jpg"
+  },
+  {
+    "name": "Schweppes",
+    "filename": "30-schweppes.jpg",
+    "publicId": "chopgofood/menu/30-schweppes",
+    "url": "https://res.cloudinary.com/koujh8vt/image/upload/v1790873900/chopgofood/menu/30-schweppes.jpg"
+  }
+]

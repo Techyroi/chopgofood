@@ -1,3 +1,9 @@
 node_modules/
 .env
+.env.local
+.env.production
 dist/
+
+# Development-only scripts
+backend/test-paystack.js
+backend/createRestaurantUser.js

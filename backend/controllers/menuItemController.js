@@ -4,9 +4,31 @@ const Restaurant = require("../models/Restaurant");
 // GET /api/menu-items
 const getMenuItems = async (req, res) => {
   try {
-    const menuItems = await MenuItem.find({ isAvailable: true })
-      .populate("restaurant", "name slug")
-      .sort({ createdAt: -1 });
+    const isPopularRequest = req.query.popular === "true";
+
+    const filter = {
+      isAvailable: true,
+    };
+
+    // Home page can request only popular food
+    if (isPopularRequest) {
+      filter.isPopular = true;
+    }
+
+    const query = MenuItem.find(filter);
+
+    // Home only needs these fields for Popular Food
+    if (isPopularRequest) {
+      query.select(
+        "restaurant name image price category preparationTime"
+      );
+    }
+
+    const menuItems = await query
+      .populate("restaurant", "name")
+      .sort({ createdAt: -1 })
+      .limit(50)
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -64,10 +86,14 @@ const getRestaurantMenuItems = async (req, res) => {
       });
     }
 
-    const menuItems = await MenuItem.find({
-      restaurant: restaurantId,
-      isAvailable: true,
-    }).sort({ createdAt: -1 });
+      const menuItems = await MenuItem.find({
+        restaurant: restaurantId,
+        isAvailable: true,
+      })
+        .populate("restaurant", "name slug")
+        .sort({ createdAt: -1 })
+        .limit(50)
+        .lean();
 
     res.status(200).json({
       success: true,
@@ -149,7 +175,7 @@ const updateMenuItem = async (req, res) => {
       req.params.id,
       req.body,
       {
-        new: true,
+        returnDocument: "after",
         runValidators: true,
       }
     );
@@ -182,7 +208,7 @@ const deleteMenuItem = async (req, res) => {
     const menuItem = await MenuItem.findByIdAndUpdate(
       req.params.id,
       { isAvailable: false },
-      { new: true }
+      { returnDocument: "after" }
     );
 
     if (!menuItem) {

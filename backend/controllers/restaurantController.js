@@ -4,7 +4,12 @@ const Restaurant = require("../models/Restaurant");
 const getRestaurants = async (req, res) => {
   try {
     const restaurants = await Restaurant.find({ isActive: true })
-      .sort({ createdAt: -1 });
+      .select(
+        "name coverImage rating cuisine estimatedDeliveryTimeMin estimatedDeliveryTimeMax"
+      )
+      .sort({ createdAt: -1 })
+      .limit(50)
+      .lean();
 
     res.status(200).json({
       success: true,
@@ -24,7 +29,7 @@ const getRestaurants = async (req, res) => {
 // GET /api/restaurants/:id
 const getRestaurantById = async (req, res) => {
   try {
-    const restaurant = await Restaurant.findById(req.params.id);
+    const restaurant = await Restaurant.findById(req.params.id).lean();
 
     if (!restaurant || !restaurant.isActive) {
       return res.status(404).json({
@@ -51,18 +56,22 @@ const getRestaurantById = async (req, res) => {
 const createRestaurant = async (req, res) => {
   try {
     const {
-      name,
-      slug,
-      description,
-      logo,
-      coverImage,
-      cuisine,
-      address,
-      phone,
-      rating,
-      deliveryFee,
-      estimatedDeliveryTime,
-      isOpen,
+     name,
+     slug,
+     description,
+     logo,
+     coverImage,
+     cuisine,
+     address,
+     phone,
+     rating,
+     deliveryFee,
+     estimatedDeliveryTimeMin,
+     estimatedDeliveryTimeMax,
+     badge,
+     deliveryMessage,
+     deliveryType,
+     isOpen,
     } = req.body;
 
     const existingRestaurant = await Restaurant.findOne({ slug });
@@ -75,18 +84,22 @@ const createRestaurant = async (req, res) => {
     }
 
     const restaurant = await Restaurant.create({
-      name,
-      slug,
-      description,
-      logo,
-      coverImage,
-      cuisine,
-      address,
-      phone,
-      rating,
-      deliveryFee,
-      estimatedDeliveryTime,
-      isOpen,
+     name,
+     slug,
+     description,
+     logo,
+     coverImage,
+     cuisine,
+     address,
+     phone,
+     rating,
+     deliveryFee,
+     estimatedDeliveryTimeMin,
+     estimatedDeliveryTimeMax,
+     badge,
+     deliveryMessage,
+     deliveryType,
+     isOpen,
     });
 
     res.status(201).json({
@@ -108,14 +121,13 @@ const createRestaurant = async (req, res) => {
 const updateRestaurant = async (req, res) => {
   try {
     const restaurant = await Restaurant.findByIdAndUpdate(
-      req.params.id,
-      req.body,
-      {
-        new: true,
-        runValidators: true,
-      }
-    );
-
+  req.params.id,
+  req.body,
+  {
+    returnDocument: "after",
+    runValidators: true,
+  }
+);
     if (!restaurant) {
       return res.status(404).json({
         success: false,
@@ -142,10 +154,10 @@ const updateRestaurant = async (req, res) => {
 const deleteRestaurant = async (req, res) => {
   try {
     const restaurant = await Restaurant.findByIdAndUpdate(
-      req.params.id,
-      { isActive: false },
-      { new: true }
-    );
+        req.params.id,
+        { isActive: false },
+        { returnDocument: "after" }
+);
 
     if (!restaurant) {
       return res.status(404).json({

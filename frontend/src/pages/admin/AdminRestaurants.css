@@ -1,0 +1,620 @@
+.admin-restaurants-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.admin-restaurants-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.admin-restaurants-eyebrow {
+  margin: 0 0 7px;
+  color: var(--chopgo-red);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admin-restaurants-header h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.admin-restaurants-subtitle {
+  margin: 7px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.admin-restaurants-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin-restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  );
+  gap: 20px;
+}
+
+.admin-restaurant-card {
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-restaurant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.admin-restaurant-cover {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+  background: #f2eeee;
+}
+
+.admin-restaurant-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.admin-restaurant-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.admin-restaurant-open-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+
+.admin-restaurant-open-status.is-open {
+  background: rgba(234, 250, 240, 0.94);
+  color: #16733a;
+}
+
+.admin-restaurant-open-status.is-closed {
+  background: rgba(255, 240, 240, 0.94);
+  color: #b42318;
+}
+
+.admin-restaurant-content {
+  padding: 18px;
+}
+
+.admin-restaurant-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-restaurant-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--chopgo-red);
+}
+
+.admin-restaurant-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-restaurant-title {
+  min-width: 0;
+}
+
+.admin-restaurant-title h2 {
+  margin: 0;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 17px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-restaurant-title span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.admin-restaurant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.admin-restaurant-info div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.admin-restaurant-info svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--chopgo-red);
+}
+
+.admin-restaurant-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.admin-restaurant-meta > div {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--page-background);
+}
+
+.admin-meta-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-restaurant-meta strong {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.admin-restaurant-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-light);
+}
+
+.admin-restaurant-active-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-restaurant-active-status.active {
+  color: #16733a;
+}
+
+.admin-restaurant-active-status.inactive {
+  color: #b42318;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.admin-restaurant-edit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.admin-restaurant-edit-button:hover {
+  border-color: var(--chopgo-red);
+  background: var(--chopgo-light-red);
+  color: var(--chopgo-red);
+}
+
+.admin-restaurants-loading,
+.admin-restaurants-error {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.admin-restaurants-error {
+  color: #b42318;
+}
+
+@media (max-width: 1100px) {
+  .admin-restaurants-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .admin-restaurants-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-restaurants-page {
+    padding: 4px;
+  }
+
+  .admin-restaurants-header h1 {
+    font-size: 26px;
+  }
+
+  .admin-restaurant-cover {
+    height: 190px;
+  }
+}
+.admin-restaurant-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20, 10, 10, 0.48);
+  backdrop-filter: blur(4px);
+}
+
+.admin-restaurant-modal {
+  width: min(760px, 100%);
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(20, 10, 10, 0.22);
+}
+
+.admin-restaurant-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 26px;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--surface);
+}
+
+.admin-restaurant-modal-header h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.admin-restaurant-modal-header p:not(.admin-restaurants-eyebrow) {
+  margin: 6px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.admin-restaurant-modal-close {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-light);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.admin-restaurant-modal-close:hover {
+  border-color: var(--chopgo-red);
+  color: var(--chopgo-red);
+}
+
+.admin-restaurant-form {
+  padding: 26px;
+}
+
+.admin-form-section {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.admin-form-section:last-of-type {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.admin-form-section h3 {
+  margin: 0 0 16px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.admin-restaurant-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.admin-restaurant-form label > span {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-restaurant-form input,
+.admin-restaurant-form textarea,
+.admin-restaurant-form select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border-light);
+  border-radius: 9px;
+  outline: none;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-restaurant-form input,
+.admin-restaurant-form select {
+  height: 42px;
+  padding: 0 12px;
+}
+
+.admin-restaurant-form textarea {
+  min-height: 90px;
+  padding: 11px 12px;
+  resize: vertical;
+}
+
+.admin-restaurant-form input:focus,
+.admin-restaurant-form textarea:focus,
+.admin-restaurant-form select:focus {
+  border-color: var(--chopgo-red);
+  box-shadow: 0 0 0 3px rgba(201, 0, 22, 0.08);
+}
+
+.admin-form-toggles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.admin-form-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 11px;
+  background: var(--page-background);
+  color: var(--text-primary);
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.admin-form-toggle.enabled {
+  border-color: rgba(201, 0, 22, 0.2);
+  background: var(--chopgo-light-red);
+}
+
+.admin-form-toggle strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.admin-form-toggle small {
+  display: block;
+  max-width: 230px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.toggle-pill {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #e8e8e8;
+  color: #777;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-form-toggle.enabled .toggle-pill {
+  background: var(--chopgo-red);
+  color: #fff;
+}
+
+.admin-restaurant-form-error,
+.admin-restaurant-form-success {
+  margin-top: 18px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-restaurant-form-error {
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.admin-restaurant-form-success {
+  background: #edf9f1;
+  color: #16733a;
+}
+
+.admin-restaurant-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 22px;
+}
+
+.admin-restaurant-cancel-button,
+.admin-restaurant-save-button {
+  min-height: 40px;
+  padding: 0 17px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-restaurant-cancel-button {
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.admin-restaurant-save-button {
+  border: 1px solid var(--chopgo-red);
+  background: var(--chopgo-red);
+  color: #fff;
+}
+
+.admin-restaurant-cancel-button:disabled,
+.admin-restaurant-save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-restaurant-save-button:not(:disabled):hover {
+  filter: brightness(0.94);
+}
+
+@media (max-width: 650px) {
+  .admin-restaurant-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .admin-restaurant-modal {
+    max-height: 94vh;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .admin-restaurant-modal-header,
+  .admin-restaurant-form {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .admin-form-grid,
+  .admin-form-toggles {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-restaurant-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .admin-restaurant-cancel-button,
+  .admin-restaurant-save-button {
+    width: 100%;
+  }
+}
