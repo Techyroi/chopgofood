@@ -55,6 +55,11 @@ router.post("/initialize", authMiddleware, async (req, res) => {
       });
     }
 
+    console.log(
+  "PAYSTACK CALLBACK URL:",
+  `${process.env.FRONTEND_URL}/checkout`
+);
+
     const response = await axios.post(
       "https://api.paystack.co/transaction/initialize",
       {
@@ -62,7 +67,7 @@ router.post("/initialize", authMiddleware, async (req, res) => {
         amount: expectedAmount,
         currency: "NGN",
         reference,
-        callback_url: "http://localhost:5173/checkout",
+        callback_url: `${process.env.FRONTEND_URL}/checkout`,
       },
       {
         headers: {
