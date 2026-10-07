@@ -237,18 +237,32 @@ await getDeliveryQuote(location, currentRestaurant);
         setLocationLoading(false);
       }
     },
-    (error) => {
-      console.error("Location error:", error);
+(error) => {
+  console.error("Location error:", error);
 
-      setLocationLoading(false);
+  setLocationLoading(false);
 
-      setLocationError(
-        "We could not get your location. Please allow location access and try again."
-      );
-    },
+  if (error.code === error.PERMISSION_DENIED) {
+    setLocationError(
+      "Location permission was denied. Please allow precise location access and try again."
+    );
+  } else if (error.code === error.POSITION_UNAVAILABLE) {
+    setLocationError(
+      "Your precise location is currently unavailable. Please move to an area with a better GPS signal and try again."
+    );
+  } else if (error.code === error.TIMEOUT) {
+    setLocationError(
+      "Getting your precise location is taking too long. Please try again."
+    );
+  } else {
+    setLocationError(
+      "We could not get your precise location. Please try again."
+    );
+  }
+},
     {
       enableHighAccuracy: true,
-      timeout: 10000,
+      timeout: 30000,
       maximumAge: 0,
     }
   );
