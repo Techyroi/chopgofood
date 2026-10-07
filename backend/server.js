@@ -36,7 +36,17 @@ app.use((req, res, next) => {
 
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://chopgofood-frontendapp-3b8ghqha4-techyroi-s-projects.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
+app.options("*", cors());
 
 app.use(
   express.json({
